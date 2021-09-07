@@ -1,0 +1,8 @@
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex10\bin\Debug\Ex10.exe.config
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex10\bin\Debug\Ex10.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex10\bin\Debug\Ex10.pdb
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex10\obj\Debug\Ex10.Form1.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex10\obj\Debug\Ex10.Properties.Resources.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex10\obj\Debug\Ex10.csproj.GenerateResource.Cache
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex10\obj\Debug\Ex10.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex10\obj\Debug\Ex10.pdb

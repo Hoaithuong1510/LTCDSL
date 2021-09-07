@@ -1,0 +1,8 @@
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex11\bin\Debug\Ex11.exe.config
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex11\bin\Debug\Ex11.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex11\bin\Debug\Ex11.pdb
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex11\obj\Debug\Ex11.frmTabControl.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex11\obj\Debug\Ex11.Properties.Resources.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex11\obj\Debug\Ex11.csproj.GenerateResource.Cache
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex11\obj\Debug\Ex11.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex11\obj\Debug\Ex11.pdb

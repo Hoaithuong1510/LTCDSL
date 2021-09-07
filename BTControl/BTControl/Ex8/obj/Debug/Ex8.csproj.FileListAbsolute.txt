@@ -1,0 +1,8 @@
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex8\bin\Debug\Ex8.exe.config
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex8\bin\Debug\Ex8.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex8\bin\Debug\Ex8.pdb
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex8\obj\Debug\Ex8.Form1.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex8\obj\Debug\Ex8.Properties.Resources.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex8\obj\Debug\Ex8.csproj.GenerateResource.Cache
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex8\obj\Debug\Ex8.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex8\obj\Debug\Ex8.pdb

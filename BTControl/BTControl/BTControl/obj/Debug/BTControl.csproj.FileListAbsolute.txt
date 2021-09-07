@@ -1,0 +1,11 @@
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\bin\Debug\BTControl.exe.config
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\obj\Debug\BTControl.csprojResolveAssemblyReference.cache
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\obj\Debug\BTControl.frmLinkLabel.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\obj\Debug\BTControl.Properties.Resources.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\obj\Debug\BTControl.csproj.GenerateResource.Cache
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\bin\Debug\BTControl.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\bin\Debug\BTControl.pdb
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\obj\Debug\BTControl.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\obj\Debug\BTControl.pdb
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\obj\Debug\BTControl.Form2.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\BTControl\obj\Debug\BTControl.Form3.resources

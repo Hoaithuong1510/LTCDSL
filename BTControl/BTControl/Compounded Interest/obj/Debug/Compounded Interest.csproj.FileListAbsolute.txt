@@ -1,0 +1,9 @@
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Compounded Interest\bin\Debug\Compounded Interest.exe.config
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Compounded Interest\bin\Debug\Compounded Interest.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Compounded Interest\bin\Debug\Compounded Interest.pdb
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Compounded Interest\obj\Debug\Compounded Interest.csprojResolveAssemblyReference.cache
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Compounded Interest\obj\Debug\Compounded_Interest.Form1.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Compounded Interest\obj\Debug\Compounded_Interest.Properties.Resources.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Compounded Interest\obj\Debug\Compounded Interest.csproj.GenerateResource.Cache
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Compounded Interest\obj\Debug\Compounded Interest.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Compounded Interest\obj\Debug\Compounded Interest.pdb

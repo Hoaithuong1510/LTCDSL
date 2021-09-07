@@ -1,0 +1,8 @@
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex13\bin\Debug\Ex13.exe.config
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex13\bin\Debug\Ex13.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex13\bin\Debug\Ex13.pdb
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex13\obj\Debug\Ex13.Form1.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex13\obj\Debug\Ex13.Properties.Resources.resources
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex13\obj\Debug\Ex13.csproj.GenerateResource.Cache
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex13\obj\Debug\Ex13.exe
+D:\Lập trình cơ sở dữ liệu\BTControl\BTControl\Ex13\obj\Debug\Ex13.pdb
