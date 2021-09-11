@@ -30,23 +30,24 @@ namespace _1911213_PhanThiHoaiThuong_Lab02_GV
 			return true;
 		}
 
-		public GiaoVien Find(string value, KieuTim kieuTim)
+
+		public GiaoVien Tim(string value, KieuTim kieu)
 		{
 			GiaoVien giaoVien = null;
-
-			switch (kieuTim)
+			switch (kieu)
 			{
-				case KieuTim.TheoHoTen:
-					giaoVien = dsGV.Find(gv => gv.HoTen == value);
-					break;
 				case KieuTim.TheoMa:
-					giaoVien = dsGV.Find(gv => gv.MaSo == value);
+					giaoVien = dsGV.Find(gv => gv.MaSo.Trim() == value.Trim());
+					break;
+				case KieuTim.TheoHoTen:
+					giaoVien = dsGV.Find(gv => gv.HoTen.Trim() == value.Trim());
 					break;
 				case KieuTim.TheoSDT:
-					giaoVien = dsGV.Find(gv => gv.SoDT == value);
+					giaoVien = dsGV.Find(gv => gv.SoDT.Trim() == value.Trim());
+					break;
+				default:
 					break;
 			}
-
 			return giaoVien;
 		}
 	}

@@ -28,26 +28,26 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.lblThongBao = new System.Windows.Forms.Label();
+			this.c = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
-			// lblThongBao
+			// c
 			// 
-			this.lblThongBao.AutoSize = true;
-			this.lblThongBao.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblThongBao.ForeColor = System.Drawing.Color.DarkViolet;
-			this.lblThongBao.Location = new System.Drawing.Point(23, 33);
-			this.lblThongBao.Name = "lblThongBao";
-			this.lblThongBao.Size = new System.Drawing.Size(35, 15);
-			this.lblThongBao.TabIndex = 0;
-			this.lblThongBao.Text = "label1";
+			this.c.AutoSize = true;
+			this.c.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.c.ForeColor = System.Drawing.Color.DarkViolet;
+			this.c.Location = new System.Drawing.Point(23, 33);
+			this.c.Name = "c";
+			this.c.Size = new System.Drawing.Size(35, 15);
+			this.c.TabIndex = 0;
+			this.c.Text = "label1";
 			// 
 			// TBGiaoVienForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(342, 162);
-			this.Controls.Add(this.lblThongBao);
+			this.ClientSize = new System.Drawing.Size(373, 232);
+			this.Controls.Add(this.c);
 			this.Name = "TBGiaoVienForm";
 			this.Text = "Thông tin giáo viên nhập";
 			this.ResumeLayout(false);
@@ -57,6 +57,6 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label lblThongBao;
+		private System.Windows.Forms.Label c;
 	}
 }

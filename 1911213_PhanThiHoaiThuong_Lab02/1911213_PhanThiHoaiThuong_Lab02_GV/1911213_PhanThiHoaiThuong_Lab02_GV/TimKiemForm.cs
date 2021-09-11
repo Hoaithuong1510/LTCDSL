@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace _1911213_PhanThiHoaiThuong_Lab02_GV
 {
-     public partial class TimKiemForm : Form
+	public partial class TimKiemForm : Form
 	{
 		private QuanLyGiaoVien quanlyGV;
 		public TimKiemForm()
 		{
 			InitializeComponent();
 		}
-		
-		public TimKiemForm(QuanLyGiaoVien qlGV) :this()
+
+		public TimKiemForm(QuanLyGiaoVien qlGV) : this()
 		{
 			quanlyGV = qlGV;
 		}
@@ -52,33 +52,32 @@ namespace _1911213_PhanThiHoaiThuong_Lab02_GV
 
 		private void btnOK_Click(object sender, EventArgs e)
 		{
-			var kieuTim = KieuTim.TheoHoTen;
+			var kieu = KieuTim.TheoHoTen;
 			if (rbMaGV.Checked)
 			{
-				kieuTim = KieuTim.TheoMa;
+				kieu = KieuTim.TheoMa;
 			}
 			else if (rbHoTen.Checked)
 			{
-				kieuTim = KieuTim.TheoHoTen;
+				kieu = KieuTim.TheoHoTen;
 			}
 			else if (rbSoDT.Checked)
 			{
-				kieuTim = KieuTim.TheoSDT;
+				kieu = KieuTim.TheoSDT;
 			}
 
-			var ketQua = quanlyGV.Find(txtFind.Text, kieuTim);
-
-			if (ketQua == null)
-            {
+			var gv = quanlyGV.Tim(txtFind.Text, kieu);
+			if (gv == null)
+			{
 				MessageBox.Show("Không tìm thấy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
-            else
-            {
-				var frm = new TBGiaoVienForm();
-				frm.SetText(ketQua.ToString());
-				frm.ShowDialog();
+			else
+			{
+				var frmTBGiaoVien = new TBGiaoVienForm();
+				frmTBGiaoVien.SetText(gv.ToString());
+				frmTBGiaoVien.ShowDialog();
 			}
 		}
-		
 	}
+
 }

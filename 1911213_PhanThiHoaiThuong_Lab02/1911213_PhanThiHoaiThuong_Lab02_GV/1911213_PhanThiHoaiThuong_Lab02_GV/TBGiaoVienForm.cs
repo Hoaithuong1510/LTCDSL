@@ -18,7 +18,7 @@ namespace _1911213_PhanThiHoaiThuong_Lab02_GV
 		}
 		public void SetText(string s)
 		{
-			this.lblThongBao.Text = s;
+			this.c.Text = s;
 		}
 	}
 }

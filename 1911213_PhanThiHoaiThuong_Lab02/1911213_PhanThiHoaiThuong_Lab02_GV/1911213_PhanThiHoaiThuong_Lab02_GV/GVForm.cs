@@ -13,10 +13,9 @@ namespace _1911213_PhanThiHoaiThuong_Lab02_GV
 {
 	public partial class GiaoVienForm : Form
 	{
-		private QuanLyGiaoVien quanLyGV;
+	    QuanLyGiaoVien quanLyGV = new QuanLyGiaoVien();
 		public GiaoVienForm()
 		{
-			quanLyGV = new QuanLyGiaoVien();
 			InitializeComponent();
 		}
 
@@ -88,11 +87,12 @@ namespace _1911213_PhanThiHoaiThuong_Lab02_GV
 			string gioiTinh = rdNam.Checked ? "Nam" : "Nữ";
 			GiaoVien gv = new GiaoVien();
 			gv.MaSo = this.cbbMaSo.Text;
+			gv.GioiTinh = gioiTinh;
 			gv.HoTen = this.txtHoTen.Text;
 			gv.NgaySinh = this.dtpNgaySinh.Value;
 			gv.Mail = this.txtMail.Text;
 			gv.SoDT = this.mktbSoĐT.Text;
-			
+
 			List<string> ngoaingu = new List<string>();
 			for (int i = 0; i < chklbNgoaiNgu.Items.Count; i++)
 			{
@@ -106,13 +106,15 @@ namespace _1911213_PhanThiHoaiThuong_Lab02_GV
 				mh.Them(new MonHoc(ob.ToString()));
 			}
 
+			gv.dsMonHoc = mh;
+
 			return gv;
 		}
 
 		private void btnFind_Click(object sender, EventArgs e)
 		{
-			var TimKiemForm = new TimKiemForm();
-			TimKiemForm.ShowDialog();
+			TimKiemForm frm = new TimKiemForm(quanLyGV);
+			frm.ShowDialog();
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
