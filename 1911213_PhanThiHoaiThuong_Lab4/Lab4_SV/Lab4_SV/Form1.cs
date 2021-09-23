@@ -215,7 +215,7 @@ namespace Lab4_SV
 			if (result == DialogResult.No)
 				Application.Exit();
 			if (result == DialogResult.Yes)
-				qlSV.GhiVaoFile(qlSV.LayDSSV());
+				qlSV.GhiVaoFile(qlSV.LuuSV());
 		}
 	}
 }

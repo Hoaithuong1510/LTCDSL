@@ -87,7 +87,7 @@ namespace Lab4_SV
 				Them(sv);
 			}
 		}
-		public List<SinhVien> LayDSSV()
+		public List<SinhVien> LuuSV()
 		{
 			return dsSV;
 		}
