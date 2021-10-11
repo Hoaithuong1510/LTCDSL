@@ -1,0 +1,4 @@
+1911213 Phan Thị Hoài   Thương	CTK43	Nữ	15/10/2001	123456789	0123.456.789	Đà Lạt, Lâm Đồng	Mạng máy tính;Lập trình CSDL;Đồ án cơ sở;Phương pháp NCKH
+1911200 Trần Thành	Tài	CTK43	Nam	05/02/2001      123123123	0123.123.123	Đà Lạt, Lâm Đồng	Hệ điều hành;Lập trình CSDL;Lập trình trên thiết bị di động
+1914825 Đoàn Huỳnh Công	Tín     CTK43	Nam	11/06/1998	124515152	0341.414.242	Đức Trọng, Lâm Đồng	Mạng máy tính;Lập trình mạng;An toàn và bảo mật hệ thống
+1914801 Phạm Huy 	Đức     CTK43	Nam	10/31/1999	134144123	0415.515.525	Bảo Lộc, Lâm Đồng	Mạng máy tính;Hệ điều hành;Lập trình CSDL;Lập trình mạng

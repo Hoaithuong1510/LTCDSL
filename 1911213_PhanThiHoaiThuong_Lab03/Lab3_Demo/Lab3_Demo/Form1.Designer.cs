@@ -31,6 +31,9 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinhVienForm));
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.mtxtMaSo = new System.Windows.Forms.MaskedTextBox();
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.sttLabelTongSV = new System.Windows.Forms.ToolStripStatusLabel();
 			this.btnExit = new System.Windows.Forms.Button();
 			this.btnDefault = new System.Windows.Forms.Button();
 			this.btnFix = new System.Windows.Forms.Button();
@@ -79,18 +82,15 @@
 			this.menuItemSapXep = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuItemTimKiem = new System.Windows.Forms.ToolStripMenuItem();
 			this.fontDialog1 = new System.Windows.Forms.FontDialog();
-			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-			this.sttLabelTongSV = new System.Windows.Forms.ToolStripStatusLabel();
-			this.mtxtMaSo = new System.Windows.Forms.MaskedTextBox();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
+			this.statusStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pbHinh)).BeginInit();
 			this.groupBox2.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
-			this.statusStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// splitContainer1
@@ -145,6 +145,31 @@
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Thông tin sinh viên";
+			// 
+			// mtxtMaSo
+			// 
+			this.mtxtMaSo.Location = new System.Drawing.Point(256, 26);
+			this.mtxtMaSo.Mask = "SV.0000000";
+			this.mtxtMaSo.Name = "mtxtMaSo";
+			this.mtxtMaSo.Size = new System.Drawing.Size(74, 22);
+			this.mtxtMaSo.TabIndex = 1;
+			// 
+			// statusStrip1
+			// 
+			this.statusStrip1.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sttLabelTongSV});
+			this.statusStrip1.Location = new System.Drawing.Point(3, 436);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(481, 22);
+			this.statusStrip1.TabIndex = 24;
+			this.statusStrip1.Text = "Tổng sinh viên";
+			// 
+			// sttLabelTongSV
+			// 
+			this.sttLabelTongSV.Name = "sttLabelTongSV";
+			this.sttLabelTongSV.Size = new System.Drawing.Size(120, 17);
+			this.sttLabelTongSV.Text = "Tổng Số Sinh Viên: 10";
 			// 
 			// btnExit
 			// 
@@ -592,31 +617,6 @@
 			this.menuItemTimKiem.Text = "Tìm kiếm";
 			this.menuItemTimKiem.Click += new System.EventHandler(this.menuItemTimKiem_Click);
 			// 
-			// statusStrip1
-			// 
-			this.statusStrip1.ImeMode = System.Windows.Forms.ImeMode.Off;
-			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sttLabelTongSV});
-			this.statusStrip1.Location = new System.Drawing.Point(3, 436);
-			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(481, 22);
-			this.statusStrip1.TabIndex = 24;
-			this.statusStrip1.Text = "Tổng sinh viên";
-			// 
-			// sttLabelTongSV
-			// 
-			this.sttLabelTongSV.Name = "sttLabelTongSV";
-			this.sttLabelTongSV.Size = new System.Drawing.Size(120, 17);
-			this.sttLabelTongSV.Text = "Tổng Số Sinh Viên: 10";
-			// 
-			// mtxtMaSo
-			// 
-			this.mtxtMaSo.Location = new System.Drawing.Point(256, 26);
-			this.mtxtMaSo.Mask = "SV.0000000";
-			this.mtxtMaSo.Name = "mtxtMaSo";
-			this.mtxtMaSo.Size = new System.Drawing.Size(74, 22);
-			this.mtxtMaSo.TabIndex = 1;
-			// 
 			// SinhVienForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -633,12 +633,12 @@
 			this.splitContainer1.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			this.statusStrip1.ResumeLayout(false);
+			this.statusStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pbHinh)).EndInit();
 			this.groupBox2.ResumeLayout(false);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
-			this.statusStrip1.ResumeLayout(false);
-			this.statusStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

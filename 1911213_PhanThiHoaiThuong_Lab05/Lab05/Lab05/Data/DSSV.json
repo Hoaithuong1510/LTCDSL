@@ -1,0 +1,38 @@
+﻿[
+	{
+		"maSo": "1911213",
+		"hoTenLot": "Phan Thị Hoài",
+		"ten": "Thương",
+		"gioiTinh": 0,
+		"ngaySinh": "9/03/2001",
+		"lop": "CTK43",
+		"soCMND": "251200533",
+		"sdt": "0915.675.920",
+		"diaChi": "Đà Lạt, Lâm Đồng",
+		"dsDangKyMonHoc": ["Mạng máy tính", "Lập trình CSDL", "Đồ án cơ sở", "Phương pháp NCKH"] 
+	},
+	{
+		"maSo": "1911200",
+		"hoTenLot": "Trần Thành",
+		"ten": "Tài",
+		"gioiTinh": 1,
+		"ngaySinh": "05/02/2001",
+		"lop": "CTK43",
+		"soCMND": "123456789",
+		"sdt": "0335.536.000",
+		"diaChi": "Đà Lạt, Lâm Đồng",
+		"dsDangKyMonHoc": ["Hệ điều hành", "Lập trình CSDL", "Lập trình trên thiết bị di động"]
+	},
+	{
+		"maSo": "1914825",
+		"hoTenLot": "Đoàn Huỳnh Công",
+		"ten": "Tín",
+		"gioiTinh": 1,
+		"ngaySinh": "11/06/1998",
+		"lop": "CTK42",
+		"soCMND": "124515152",
+		"sdt": "0234.567.876",
+		"diaChi": "Đức Trọng, Lâm Đồng",
+		"dsDangKyMonHoc": ["Mạng máy tính", "Lập trình mạng", "An toàn và bảo mật hệ thống"]
+	}
+]

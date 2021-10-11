@@ -1,0 +1,3 @@
+﻿1911213*Phan Thị Hoài*Thương*Nữ*15/10/2001*CTK43*251200533*0915.675.920*Đà Lạt, Lâm Đồng*Mạng máy tính;Lập trình CSDL;Đồ án cơ sở;Phương pháp NCKH
+1911200*Trần Thành*Tài*Nam*05/02/2001*CTK43*123456789*0335.536.000*Đà Lạt, Lâm Đồng*Hệ điều hành;Lập trình CSDL;Lập trình trên thiết bị di động
+1914825*Đoàn Huỳnh Công*Tín*Nam*11/06/1998*CTK42*124515152*0234.567.876*Đức Trọng, Lâm Đồng*Mạng máy tính;Lập trình mạng;An toàn và bảo mật hệ thống
