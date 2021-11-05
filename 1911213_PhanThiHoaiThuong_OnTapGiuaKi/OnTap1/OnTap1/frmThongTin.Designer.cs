@@ -156,7 +156,6 @@
 			this.txtMSSV.Margin = new System.Windows.Forms.Padding(2);
 			this.txtMSSV.Mask = "0000000";
 			this.txtMSSV.Name = "txtMSSV";
-			this.txtMSSV.ReadOnly = true;
 			this.txtMSSV.Size = new System.Drawing.Size(198, 20);
 			this.txtMSSV.TabIndex = 69;
 			// 

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace OnTap1.IO
 {
-	public class TextDataSource : IDataSource
+	public class TextDataSource : IKhoa
 	{
 		private const string path = "Data/DSSV.txt";
 		public List<Khoa> khoa = new List<Khoa>();
 
-		public List<Khoa> GetSV()
+		public List<Khoa> Read()
 		{
 			Khoa khoa;
 			List<Khoa> dskhoa = new List<Khoa>();
@@ -58,8 +58,7 @@ namespace OnTap1.IO
 				}
 			}
 		}
-
-		public SinhVien ParseSV (string line)
+		private SinhVien ParseSV(string line)
 		{
 			var parts = line.Split('\t');
 			return new SinhVien()
@@ -67,10 +66,11 @@ namespace OnTap1.IO
 				MaSo = parts[0],
 				HoTenLot = parts[1],
 				Ten = parts[2],
-				NgaySinh = DateTime.MinValue,
 				Lop = parts[3],
-				SĐT = "",
 				Khoa = parts[4],
+				GioiTinh = true,
+				NgaySinh = DateTime.MinValue,
+				SĐT = "",
 				DiaChi = ""
 			};
 		}

@@ -12,12 +12,13 @@ namespace OnTap1
 	{
 		public List<Khoa> khoas = new List<Khoa>();
 		public List<SinhVien> sinhviens { get; set; }
-		private IDataSource _ISinhVien;
+		private IKhoa _IKhoa;
+		private ILop _ILop;
 
 		public QuanLySinhVien()
 		{
-			_ISinhVien = new TextDataSource();
-			Reload();
+			_IKhoa = new TextDataSource();
+			khoas = _IKhoa.Read();
 		}
 		public void Them(Khoa khoa)
 		{
@@ -47,13 +48,13 @@ namespace OnTap1
 			{
 				sinhViens(sv.Khoa).Add(sv);
 				sinhvien(sv.Khoa, sv.Lop).Add(sv);
-				_ISinhVien.Save(khoas);
+				_IKhoa.Save(khoas);
 				return true;
 			}
 			return false;
 		}
 
-		public bool UpdateSVToControl(SinhVien sv)
+		public bool UpdateSinhVien(SinhVien sv)
 		{
 			var i = sinhViens(sv.Khoa).FindIndex(x => x.MaSo == sv.MaSo);
 			if (i == -1)
@@ -61,13 +62,8 @@ namespace OnTap1
 				return false;
 			}
 			sinhViens(sv.Khoa)[i] = sv;
-			_ISinhVien.Save(khoas);
+			_IKhoa.Save(khoas);
 			return true;
-		}
-
-		public void Reload()
-		{
-			khoas = _ISinhVien.GetSV();
 		}
 
 		public void RemoveSV(SinhVien sv)

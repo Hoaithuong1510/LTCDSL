@@ -18,22 +18,23 @@ namespace OnTap1
 		public string Khoa { get; set; }
 		public string DiaChi { get; set; }
 
-
-		public SinhVien(string maSo, string hoTenLot, string ten, bool gioiTinh, DateTime ngaySinh, string sdt, string lop, string khoa, string diaChi)
-		{
-			this.MaSo = maSo;
-			this.HoTenLot = hoTenLot;
-			this.Ten = ten;
-			this.GioiTinh = gioiTinh;
-			this.NgaySinh = ngaySinh;
-			this.SĐT = sdt;
-			this.Lop = lop;
-			this.Khoa = Khoa;
-			this.DiaChi = diaChi;
-		}
 		public SinhVien()
 		{
 
+		}
+
+		public SinhVien(string maSo, string hoTen, string ten, bool gioiTinh, DateTime ngaySinh, string sđt, 
+			string lop, string khoa, string diaChi)
+		{
+			MaSo = maSo;
+			HoTenLot = hoTen;
+			Ten = ten;
+			GioiTinh = gioiTinh;
+			NgaySinh = ngaySinh;
+			SĐT = sđt;
+			Lop = lop;
+			Khoa = khoa;
+			DiaChi = diaChi;
 		}
 
 	}

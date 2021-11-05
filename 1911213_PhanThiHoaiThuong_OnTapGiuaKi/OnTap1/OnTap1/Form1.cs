@@ -22,6 +22,7 @@ namespace OnTap1
 
 		public Form1()
 		{
+			
 			InitializeComponent();
 			_qlSinhVien = new QuanLySinhVien();
 			_sinhvien = new List<SinhVien>();
@@ -49,24 +50,6 @@ namespace OnTap1
 			foreach (SinhVien sv in dssv)
 				ThemSV(sv);
 		}
-
-		private SinhVien GetSVLV(ListViewItem item)
-		{
-			return new SinhVien()
-			{
-				MaSo = item.SubItems[0].Text,
-				HoTenLot = item.SubItems[1].Text,
-				Ten = item.SubItems[2].Text,
-				GioiTinh = item.SubItems[3].Text == "Nam" ? true : false,
-				NgaySinh = DateTime.Parse(item.SubItems[4].Text),
-				SĐT = item.SubItems[5].Text,
-				Lop = item.SubItems[6].Text,
-				Khoa = item.SubItems[7].Text,
-				DiaChi = item.SubItems[8].Text
-			};
-		}
-
-	
 
 		private void ShowFeedOnTreeView()
 		{
@@ -105,37 +88,7 @@ namespace OnTap1
 			if (txtTim.Text == _holderText)
 				txtTim.Text = "";
 		}
-		public List<SinhVien> GetSvID(string id)
-		{
-			List<SinhVien> ds = new List<SinhVien>();
-			foreach (var x in _sinhvien)
-				if (x.MaSo.Contains(id))
-					ds.Add(x);
-			return ds;
-		}
-		public List<SinhVien> GetSvPhone(string id)
-		{
-			List<SinhVien> ds = new List<SinhVien>();
-			foreach (var x in _sinhvien)
-				if (x.SĐT.Contains(id))
-					ds.Add(x);
-			return ds;
-		}
-		public List<SinhVien> GetSvName(string id)
-		{
-			List<SinhVien> ds = new List<SinhVien>();
-			foreach (var x in _sinhvien)
-				if (x.HoTenLot.Contains(id))
-					ds.Add(x);
-			return ds;
-		}
-		private void txtTim_TextChanged(object sender, EventArgs e)
-		{
-			if (this.rbMSSV.Checked) LoadSVToListView(GetSvID(this.txtTim.Text));
-			if (this.rbSDT.Checked) LoadSVToListView(GetSvPhone(this.txtTim.Text));
-			if (this.rbHoten.Checked) LoadSVToListView(GetSvName(this.txtTim.Text));
-		}
-
+		
 		private void tvDSKhoa_AfterSelect(object sender, TreeViewEventArgs e)
 		{
 			lvDSSV.Items.Clear();
@@ -152,6 +105,37 @@ namespace OnTap1
 				_sinhvien = _qlSinhVien.sinhvien(_parent, _node);
 			}
 			LoadSVToListView(_sinhvien);
+		}
+		public List<SinhVien> FindSvByID(string id)
+		{
+			List<SinhVien> ds = new List<SinhVien>();
+			foreach (var x in _sinhvien)
+				if (x.MaSo.Contains(id))
+					ds.Add(x);
+			return ds;
+		}
+		public List<SinhVien> FindSvByName(string id)
+		{
+			List<SinhVien> ds = new List<SinhVien>();
+			foreach (var x in _sinhvien)
+				if (x.HoTenLot.Contains(id))
+					ds.Add(x);
+			return ds;
+		}
+		public List<SinhVien> FindSvByPhone(string id)
+		{
+			List<SinhVien> ds = new List<SinhVien>();
+			foreach (var x in _sinhvien)
+				if (x.SĐT.Contains(id))
+					ds.Add(x);
+			return ds;
+		}
+
+		private void txtTim_TextChanged(object sender, EventArgs e)
+		{
+			if (this.rbMSSV.Checked) LoadSVToListView(FindSvByID(this.txtTim.Text));
+			if (this.rbHoten.Checked) LoadSVToListView(FindSvByName(this.txtTim.Text));
+			if (this.rbSDT.Checked) LoadSVToListView(FindSvByPhone(this.txtTim.Text));
 		}
 
 		private void tsmiThem_Click(object sender, EventArgs e)
@@ -204,7 +188,6 @@ namespace OnTap1
 			sf.InitialDirectory = @"D:\";
 			sf.FileName = _node;
 			sf.Filter = "Excel 2007 file(xlsx>(*.xlsx)|*.xlsx";
-			sf.FilterIndex = 1;
 			if (sf.ShowDialog() == DialogResult.OK)
 			{
 				_qlSinhVien.SaveExcel(_qlSinhVien.sinhvien(_parent, _node), sf.FileName);
@@ -218,7 +201,6 @@ namespace OnTap1
 			sf.InitialDirectory = @"D:\";
 			sf.FileName = _node;
 			sf.Filter = "Json file(json)(*.json)|*.json";
-			sf.FilterIndex = 2;
 			if (sf.ShowDialog() == DialogResult.OK)
 			{
 				_qlSinhVien.SaveJSON(_qlSinhVien.sinhvien(_parent, _node), sf.FileName);

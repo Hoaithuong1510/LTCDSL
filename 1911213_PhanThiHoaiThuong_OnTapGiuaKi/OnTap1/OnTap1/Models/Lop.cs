@@ -16,9 +16,6 @@ namespace OnTap1.Models
 			_tenlop = tenlop;
 			sinhvien = new List<SinhVien>();
 		}
-		public Lop()
-		{
 
-		}
 	}
 }

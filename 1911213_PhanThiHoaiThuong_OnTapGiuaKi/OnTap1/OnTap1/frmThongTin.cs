@@ -19,6 +19,7 @@ namespace OnTap1
 
 		public frmThongTin(QuanLySinhVien qlSinhVien)
 		{
+			
 			InitializeComponent();
 			this._qlSinhVien = qlSinhVien;
 		}
@@ -36,26 +37,28 @@ namespace OnTap1
 			SinhVien sv = new SinhVien();
 			
 		}
-		
 		private void SetSV()
 		{
-			txtMSSV.Text = sv.MaSo;
-			txtHo.Text = sv.HoTenLot;
-			txtTen.Text = sv.Ten;
-			rbNam.Checked = (sv.GioiTinh == true ? true : false);
-			rbNu.Checked = (sv.GioiTinh == false ? true : false);
-			dtpNgaysinh.Text = DateTime.Now.ToShortDateString();
-			cbbLop.Text = sv.Lop;
-			cbbKhoa.Text = sv.Khoa;
-			txtSdt.Text = sv.SĐT;
-			txtDiachi.Text = sv.DiaChi;
+			if (sv != null)
+			{
+				txtMSSV.Text = sv.MaSo;
+				txtHo.Text = sv.HoTenLot;
+				txtTen.Text = sv.Ten;
+				rbNam.Checked = (sv.GioiTinh == true ? true : false);
+				rbNu.Checked = (sv.GioiTinh == false ? true : false);
+				dtpNgaysinh.Text = DateTime.Now.ToShortDateString();
+				cbbLop.Text = sv.Lop;
+				cbbKhoa.Text = sv.Khoa;
+				txtSdt.Text = sv.SĐT;
+				txtDiachi.Text = sv.DiaChi;
+			}
 		}
 		private void UpdateSV()
 		{
 			sv.HoTenLot = txtHo.Text;
 			sv.Ten = txtTen.Text;
 			sv.NgaySinh = dtpNgaysinh.Value.Date;
-			sv.GioiTinh = rbNam.Checked == true ? true : false;
+			sv.GioiTinh = (rbNam.Checked == true ? true : false);
 			sv.SĐT = txtSdt.Text;
 			sv.DiaChi = txtDiachi.Text;
 			sv.Lop = cbbLop.Text;
@@ -78,20 +81,20 @@ namespace OnTap1
 		}
 		private void btnLuu_Click(object sender, EventArgs e)
 		{
-			string s = "";
+			string i = "";
 			if (String.IsNullOrEmpty(this.txtMSSV.Text))
-				s += "MSSV, ";
+				i += "MSSV, ";
 			if (String.IsNullOrEmpty(this.txtHo.Text))
-				s += "Họ và tên lót, ";
+				i += "Họ và tên lót, ";
 			if (String.IsNullOrEmpty(this.txtTen.Text))
-				s += "Tên, ";
-			if (String.IsNullOrEmpty(this.cbbKhoa.Text))
-				s += "Khoa, ";
+				i += "Tên, ";
 			if (String.IsNullOrEmpty(this.cbbLop.Text))
-				s += "Lớp, ";
+				i += "Lớp, ";
+			if (String.IsNullOrEmpty(this.cbbKhoa.Text))
+				i += "Khoa, ";
 			if (this.dtpNgaysinh.Value == DateTime.Today)
-				s += "Ngày sinh, ";
-			if (s == "")
+				i += "Ngày sinh, ";
+			if (i == "")
 			{
 				if (sv != null)
 				{
@@ -99,25 +102,21 @@ namespace OnTap1
 					if (result == DialogResult.Yes)
 					{
 						UpdateSV();
-						if (_qlSinhVien.UpdateSVToControl(sv))
-						{
-							MessageBox.Show("Đã nhập thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-							this.DialogResult = DialogResult.OK;
-							this.Close();
-						}
-					}
-					else
-					{
-						GetSinhVien();
-						DialogResult = DialogResult.OK;
+						this.DialogResult = DialogResult.OK;
 						this.Close();
 					}
 				}
 				else
 				{
-					MessageBox.Show("Bạn chưa nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+					GetSinhVien();
+					DialogResult = DialogResult.OK;
+					this.Close();
 				}
+			}
+			else
+			{
+				MessageBox.Show("Bạn chưa nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
 			}
 		}
 
