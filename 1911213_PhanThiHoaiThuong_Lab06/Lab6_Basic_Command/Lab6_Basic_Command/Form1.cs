@@ -186,5 +186,11 @@ namespace Lab6_Basic_Command
 			AccountManager accountForm = new AccountManager();
 			accountForm.ShowDialog();
 		}
+
+		private void btnTable_Click(object sender, EventArgs e)
+		{
+			TableForm tableForm = new TableForm();
+			tableForm.ShowDialog();
+		}
 	}
 }

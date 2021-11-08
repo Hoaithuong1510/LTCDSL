@@ -25,6 +25,7 @@ namespace Lab6_Basic_Command
 		}
 		public void LoadFood(int categoryID)
 		{
+			this.categoryID = categoryID;
 			string connectionString = @"Data Source=HOAITHUONG\HTK43;Initial Catalog=RestaurantManagement;Integrated Security=True";
 			SqlConnection sqlConnection = new SqlConnection(connectionString);
 			SqlCommand sqlCommand = sqlConnection.CreateCommand();
@@ -56,12 +57,15 @@ namespace Lab6_Basic_Command
 
 			sqlConnection.Open();
 
-			sqlCommand.CommandText = "DELETE FROM Food WHERE FoodCategoryID = " + categoryID;
-			sqlCommand.ExecuteNonQuery();
-
 			for (int i = 0; i < dgvFood.Rows.Count - 1; i++)
 			{
-				string query = string.Format("" +
+				int id = (int)dgvFood.Rows[i].Cells["ID"].Value;
+				sqlCommand.CommandText = "SELECT * FROM Food WHERE ID = " + id;
+				var checkID = sqlCommand.ExecuteScalar();
+
+				if (checkID == null)
+				{
+					string query = string.Format("" +
 					"INSERT INTO Food(Name, Unit, FoodCategoryID, Price, Notes)" + " " +
 					"VALUES (N'{0}', N'{1}', {2}, {3}, N'{4}')",
 					dgvFood.Rows[i].Cells["Name"].Value,
@@ -69,8 +73,23 @@ namespace Lab6_Basic_Command
 					categoryID,
 					dgvFood.Rows[i].Cells["Price"].Value,
 					dgvFood.Rows[i].Cells["Notes"].Value).ToString();
-				sqlCommand.CommandText = query;
-				sqlCommand.ExecuteNonQuery();
+				    sqlCommand.CommandText = query;
+				    sqlCommand.ExecuteNonQuery();
+					MessageBox.Show("Thêm món ăn mới thành công");
+				}
+				else
+				{
+					string query = string.Format(" UPDATE Food SET Name = N'{0}', Unit = N'{1}', FoodCategoryID = {2}, Price = {3}, Notes = N'{4}' WHERE ID = {5}",
+					dgvFood.Rows[i].Cells["Name"].Value,
+					dgvFood.Rows[i].Cells["Unit"].Value,
+					categoryID,
+					dgvFood.Rows[i].Cells["Price"].Value,
+					dgvFood.Rows[i].Cells["Notes"].Value.ToString(),
+					id.ToString());
+					sqlCommand.CommandText = query;
+					sqlCommand.ExecuteNonQuery();
+					MessageBox.Show("Cập nhật thành công");
+				}
 			}
 
 			sqlConnection.Close();
@@ -95,13 +114,16 @@ namespace Lab6_Basic_Command
 
 			int numOfRowsEffected = sqlCommand.ExecuteNonQuery();
 
-			if (numOfRowsEffected != 1)
+			if (numOfRowsEffected == 1)
+			{
+				dgvFood.Rows.Remove(selectedRow);
+				MessageBox.Show("Đã xoá món ăn");
+			}
+			else
 			{
 				MessageBox.Show("Có lỗi xảy ra.");
 				return;
 			}
-
-			dgvFood.Rows.Remove(selectedRow);
 
 			sqlConnection.Close();
 		}

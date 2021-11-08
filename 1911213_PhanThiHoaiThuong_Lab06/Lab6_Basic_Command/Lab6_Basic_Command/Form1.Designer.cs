@@ -48,6 +48,7 @@
 			this.btnDelete = new System.Windows.Forms.Button();
 			this.btnBill = new System.Windows.Forms.Button();
 			this.btnTaiKhoan = new System.Windows.Forms.Button();
+			this.btnTable = new System.Windows.Forms.Button();
 			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -206,7 +207,7 @@
 			// btnBill
 			// 
 			this.btnBill.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnBill.Location = new System.Drawing.Point(371, 461);
+			this.btnBill.Location = new System.Drawing.Point(230, 461);
 			this.btnBill.Name = "btnBill";
 			this.btnBill.Size = new System.Drawing.Size(99, 23);
 			this.btnBill.TabIndex = 11;
@@ -217,7 +218,7 @@
 			// btnTaiKhoan
 			// 
 			this.btnTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnTaiKhoan.Location = new System.Drawing.Point(508, 461);
+			this.btnTaiKhoan.Location = new System.Drawing.Point(371, 461);
 			this.btnTaiKhoan.Name = "btnTaiKhoan";
 			this.btnTaiKhoan.Size = new System.Drawing.Size(99, 23);
 			this.btnTaiKhoan.TabIndex = 12;
@@ -225,11 +226,23 @@
 			this.btnTaiKhoan.UseVisualStyleBackColor = true;
 			this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
 			// 
+			// btnTable
+			// 
+			this.btnTable.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTable.Location = new System.Drawing.Point(508, 461);
+			this.btnTable.Name = "btnTable";
+			this.btnTable.Size = new System.Drawing.Size(99, 23);
+			this.btnTable.TabIndex = 13;
+			this.btnTable.Text = "Xem bàn";
+			this.btnTable.UseVisualStyleBackColor = true;
+			this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(635, 496);
+			this.Controls.Add(this.btnTable);
 			this.Controls.Add(this.btnTaiKhoan);
 			this.Controls.Add(this.btnBill);
 			this.Controls.Add(this.btnDelete);
@@ -272,6 +285,7 @@
 		private System.Windows.Forms.ToolStripMenuItem tsmViewFood;
 		private System.Windows.Forms.Button btnBill;
 		private System.Windows.Forms.Button btnTaiKhoan;
+		private System.Windows.Forms.Button btnTable;
 	}
 }
 

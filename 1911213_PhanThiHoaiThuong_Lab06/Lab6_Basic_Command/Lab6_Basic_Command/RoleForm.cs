@@ -11,35 +11,32 @@ using System.Windows.Forms;
 
 namespace Lab6_Basic_Command
 {
-	public partial class BillDetailsForm : Form
+	public partial class RoleForm : Form
 	{
-		public BillDetailsForm()
+		public RoleForm()
 		{
 			InitializeComponent();
 		}
-		public void LoadBillDetails(int id)
+		public void LoadRoles(string accountName)
 		{
 			string connectionString = @"Data Source=HOAITHUONG\HTK43;Initial Catalog=RestaurantManagement;Integrated Security=True";
 			SqlConnection sqlConnection = new SqlConnection(connectionString);
 			SqlCommand sqlCommand = sqlConnection.CreateCommand();
 
-			string query = $"SELECT B.ID,B.[InvoiceID],FOOD.[NAME],B.[Quantity] FROM [BillDetails] as B,[FOOD] WHERE [InvoiceID] = {id} AND [FoodID] = FOOD.ID";
-			sqlCommand.CommandText = query;
-
 			sqlConnection.Open();
 
-			SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+			sqlCommand.CommandText = "SELECT A.AccountName,C.RoleName from Account A, RoleAccount B,Role C " +
+				 "where A.AccountName = B.AccountName and B.RoleID = C.ID and A.AccountName = N'" + accountName + "'";
 
-			DataTable dt = new DataTable("Food");
+			SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+			DataTable dt = new DataTable("Role");
 			da.Fill(dt);
-			da.Dispose();
+			dgvRole.DataSource = dt;
+			dgvRole.Columns[0].HeaderText = "Tên tài khoản";
+			dgvRole.Columns[0].HeaderText = "Tên vai trò";
 			sqlConnection.Close();
 			sqlConnection.Dispose();
-			dgvBillDetails.DataSource = dt;
-			dgvBillDetails.Columns["InvoiceID"].HeaderText = "Mã Bill";
-			dgvBillDetails.Columns["NAME"].HeaderText = "Tên món";
-			dgvBillDetails.Columns["Quantity"].HeaderText = "Số lượng";
-
+			da.Dispose();
 		}
 	}
 }
